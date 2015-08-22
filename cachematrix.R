@@ -23,7 +23,7 @@ makeCacheMatrix <- function(x = matrix()) {
 #is already calculated. If so the cached inversed matrix will be used.
 
 cacheSolve <- function(x, ...) {
-    m <- x$getinverse()
+    m <- solve(x)
     if(!is.null(m)) {
         message("getting cached data")
         return(m)
